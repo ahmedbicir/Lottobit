@@ -1,38 +1,47 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-import ButtonGroup from '../components/ButtonGroup';
 import NumberSelector from '../components/NumberSelector';
 import Footer from '../components/Footer';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import backgroundImage from '../images/rabit.jpg'; 
 
-const BackgroundContainer = styled(Box)({
+const BackgroundContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   minHeight: '100vh',
-  backgroundImage: `url(${backgroundImage.src})`, 
+  backgroundImage: `url(${backgroundImage.src})`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
-  zIndex:-1,
-});
+  zIndex: -1,
+  [theme.breakpoints.down('sm')]: {
+    backgroundPosition: 'top',
+  },
+}));
 
-const ContentBox = styled(Box)({
+const ContentBox = styled(Box)(({ theme }) => ({
   backgroundColor: 'rgba(255, 255, 255, 0.8)',
   padding: '20px',
   borderRadius: '10px',
   display: 'inline-block',
   margin: '20px 0',
-});
+  [theme.breakpoints.down('sm')]: {
+    padding: '10px',
+    margin: '10px 0',
+  },
+}));
 
-const MainContent = styled(Container)({
+const MainContent = styled(Container)(({ theme }) => ({
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-});
+  [theme.breakpoints.down('sm')]: {
+    padding: '10px',
+  },
+}));
 
 const Home: React.FC = () => {
   return (
@@ -48,7 +57,7 @@ const Home: React.FC = () => {
           <Grid container spacing={4} justifyContent="center">
             <Grid item xs={12} md={6}>
               <ContentBox>
-                <Typography variant="h5" gutterBottom>Your chance to win a <span style={{background:"gold",fontWeight:"bold"}}>BTC</span></Typography>
+                <Typography variant="h5" gutterBottom>Your chance to win a <span style={{ background: "gold", fontWeight: "bold" }}>BTC</span></Typography>
                 <Typography variant="body1">
                   1) Connect your Wallet<br />
                   2) Select your 7 gameplay Numbers and then click Next<br />
@@ -60,11 +69,10 @@ const Home: React.FC = () => {
               </ContentBox>
             </Grid>
             <Grid item xs={12} md={6}>
-              <NumberSelector />
+              {/* <NumberSelector /> */}
             </Grid>
           </Grid>
         </MainContent>
-        <ButtonGroup />
         <Footer />
       </BackgroundContainer>
     </>
