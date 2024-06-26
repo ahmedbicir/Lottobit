@@ -58,8 +58,8 @@ const Header: React.FC = () => {
             <Typography variant="body1">FAQs</Typography>
           </NavLinks>
           <Box>
-            <Button variant="contained" sx={{ background: "#f2c94c", marginRight: '10px' }}>Connect Wallet</Button>
             <Button variant="contained" onClick={handlePlayGameClick}>Play Game</Button>
+            <Button variant="contained" sx={{ background: "#f2c94c", marginRight: '10px' }}>Connect Wallet</Button>
           </Box>
         </NavBar>
       </Toolbar>
