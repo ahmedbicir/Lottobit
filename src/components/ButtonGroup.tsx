@@ -2,7 +2,6 @@
 import React from 'react';
 import { Box, Button, Grid, Link, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import RoadMap from './RoadMap';
 
 const ButtonContainer = styled(Box)({
   display: 'flex',
@@ -45,7 +44,7 @@ const ButtonGroup: React.FC = () => {
         sx={{ 
           marginRight: 2, 
           position: 'absolute', 
-          left: { xs: '100px', sm: '200px' }, // Shift to 100px on small screens, 200px on larger screens
+          left: { xs: '100px', sm: '200px' }, 
           padding: '15px', 
           color: "white", 
           background:"#1E196D" ,
@@ -55,7 +54,8 @@ const ButtonGroup: React.FC = () => {
         }}
       >
         Roadmap
-      </Link>         <Link href="#" color="inherit" sx={{ marginRight: 2,position: 'absolute',top:"70px" ,left: "100px", padding: '10px',color:"black", background:"#F4C204",border:"2px solid white",padding:"15px",borderRadius:"10px",textDecoration:"none" }}>Terms and Conditions</Link> 
+      </Link>        
+       <Link href="#" sx={{ marginRight: 2,position: 'absolute',top:"70px" ,left: "100px",color:"black", background:"#F4C204",border:"2px solid white",padding:"15px",borderRadius:"10px",textDecoration:"none" }}>Terms and Conditions</Link> 
           </Box>
         </Box>
       </Grid>
