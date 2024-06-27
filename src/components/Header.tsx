@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import { AppBar, Toolbar, Typography, Button, Box,Link} from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 
@@ -56,7 +56,14 @@ const Header: React.FC = () => {
           </Typography>
           <NavLinks>
             <Typography variant="body1">About</Typography>
-            <Typography variant="body1">Witepaper</Typography>
+            <Link
+              href="/notes/fragments.pdf" // Update with the actual path to your whitepaper file
+              download="fragments.pdf" // Suggests the filename for the download
+              sx={{ color: 'inherit', textDecoration: 'none' }}
+            >
+              <Typography variant="body1">Whitepaper</Typography>
+            </Link>           
+            
             <Typography variant="body1">Roadmap</Typography>
             <Typography variant="body1">FAQs</Typography>
           </NavLinks>

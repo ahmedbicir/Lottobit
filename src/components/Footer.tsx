@@ -30,13 +30,13 @@ const Footer: React.FC = () => {
       
       <Typography variant="h6" sx={{color:"white",fontFamily:"Handlee"}}>Follow Us</Typography>
      
-      <IconButton href="#" color="inherit"  sx={{background:"blue" ,marginLeft:"20px"}}>
+      <IconButton href="#" color="inherit"  sx={{background:"#F4C204" ,marginLeft:"20px"}}>
           <FacebookIcon />
         </IconButton>
-        <IconButton href="#" color="inherit" sx={{background:"blue",marginLeft:"20px"}}>
+        <IconButton href="#" color="inherit" sx={{background:"#F4C204",marginLeft:"20px"}}>
           <TwitterIcon />
         </IconButton>
-        <IconButton href="#" color="inherit" sx={{background:"blue",marginLeft:"20px"}}>
+        <IconButton href="#" color="inherit" sx={{background:"#F4C204",marginLeft:"20px"}}>
           <InstagramIcon />
         </IconButton>
       </Box>
