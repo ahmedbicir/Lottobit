@@ -7,32 +7,36 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const FooterContainer = styled(Box)({
   display: 'flex',
-  justifyContent: 'space-between',
-  margin: '20px 0',
-  padding: '0 20px',
-  color:'white',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  padding: '20px',
+  background: '#151313',
+  marginTop: 'auto', // to push the footer to the bottom of the page
+  gap: '20px', // space between social media links
  
 });
-
+const SocialLink = styled(IconButton)({
+  textDecoration: 'none',
+  color: 'inherit',
+  margin: '20px',
+  padding:"20px",
+});
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
+      {/* fontFamily: "'Comic Sans MS', 'Handlee', 'Patrick Hand', */}
       <Box>
-        <Link href="#" color="inherit" sx={{ marginRight: 2 }}>Roadmap</Link>
-        <Link href="#" color="inherit">Use Case</Link>
-      </Box>
-      <Box>
-        <Link href="#" color="inherit" sx={{ marginRight: 2 }}>Terms and Conditions</Link>
-        <Link href="#" color="inherit">Privacy Policy</Link>
-      </Box>
-      <Box>
-        <IconButton href="#" color="inherit"  sx={{background:"blue"}}>
+      
+      <Typography variant="h6" sx={{color:"white",fontFamily:"Handlee"}}>Follow Us</Typography>
+     
+      <IconButton href="#" color="inherit"  sx={{background:"blue" ,marginLeft:"20px"}}>
           <FacebookIcon />
         </IconButton>
-        <IconButton href="#" color="inherit" sx={{background:"blue"}}>
+        <IconButton href="#" color="inherit" sx={{background:"blue",marginLeft:"20px"}}>
           <TwitterIcon />
         </IconButton>
-        <IconButton href="#" color="inherit" sx={{background:"blue"}}>
+        <IconButton href="#" color="inherit" sx={{background:"blue",marginLeft:"20px"}}>
           <InstagramIcon />
         </IconButton>
       </Box>

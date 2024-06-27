@@ -4,10 +4,12 @@ import { styled } from '@mui/material/styles';
 import { useRouter } from 'next/router';
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  background: 'transparent',
+  background: '#151313',
   boxShadow: 'none',
-  padding: '10px 20px',
-  color: 'blue',
+  padding: '20px 20px', 
+  
+   color: 'white',
+ 
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
   },
@@ -27,9 +29,10 @@ const NavLinks = styled(Box)(({ theme }) => ({
   display: 'flex',
   gap: '20px',
   fontWeight: 'bold',
-  fontSize: '16px', // Reduced font size for smaller screens
-  background: 'white',
+  fontSize: '20px', // Reduced font size for smaller screens
+  // background: 'white',
   padding: '10px',
+  
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column',
     alignItems: 'center',
@@ -53,13 +56,13 @@ const Header: React.FC = () => {
           </Typography>
           <NavLinks>
             <Typography variant="body1">About</Typography>
-            <Typography variant="body1">Litepaper</Typography>
+            <Typography variant="body1">Witepaper</Typography>
             <Typography variant="body1">Roadmap</Typography>
             <Typography variant="body1">FAQs</Typography>
           </NavLinks>
           <Box>
-            <Button variant="contained" onClick={handlePlayGameClick}>Play Game</Button>
-            <Button variant="contained" sx={{ background: "#f2c94c", marginRight: '10px' }}>Connect Wallet</Button>
+            <Button variant="contained" onClick={handlePlayGameClick} sx={{marginRight:"10px",background:"#1E196D"}}>Play Game</Button>
+            <Button variant="contained" sx={{ background: "#F4C204", }}>Connect Wallet</Button>
           </Box>
         </NavBar>
       </Toolbar>

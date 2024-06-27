@@ -4,7 +4,8 @@ import NumberSelector from '../components/NumberSelector';
 import Footer from '../components/Footer';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import backgroundImage from '../images/rabit.jpg'; 
+import backgroundImage from '../images/backgroundimg.jpg'; 
+import ButtonGroup from '@/components/ButtonGroup';
 
 const BackgroundContainer = styled(Box)(({ theme }) => ({
   display: 'flex',
@@ -15,6 +16,10 @@ const BackgroundContainer = styled(Box)(({ theme }) => ({
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'center',
   zIndex: -1,
+  marginTop:"20px",
+  // opacity:0.7,
+
+
   [theme.breakpoints.down('sm')]: {
     backgroundPosition: 'top',
   },
@@ -22,6 +27,8 @@ const BackgroundContainer = styled(Box)(({ theme }) => ({
 
 const ContentBox = styled(Box)(({ theme }) => ({
   backgroundColor: 'rgba(255, 255, 255, 0.8)',
+  border:"2px solid rgba(255, 255, 255, 0.8)",
+  color:"black",
   padding: '20px',
   borderRadius: '10px',
   display: 'inline-block',
@@ -32,12 +39,14 @@ const ContentBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-const MainContent = styled(Container)(({ theme }) => ({
+const MainContent = styled(Box)(({ theme }) => ({
   flex: 1,
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
+  margin: '20px 0',
+  padding: '10px 20px',
   [theme.breakpoints.down('sm')]: {
     padding: '10px',
   },
@@ -48,16 +57,16 @@ const Home: React.FC = () => {
     <>
       <Head>
         <title>Crypto Landing Page</title>
-        <meta name="description" content="Landing page for a crypto company" />
+        <meta name="description" content="Landing page for a lattobit " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <BackgroundContainer>
         <Header />
         <MainContent>
-          <Grid container spacing={4} justifyContent="center">
+          <Grid container spacing={4} justifyContent="center" >
             <Grid item xs={12} md={6}>
               <ContentBox>
-                <Typography variant="h5" gutterBottom>Your chance to win a <span style={{ background: "gold", fontWeight: "bold" }}>BTC</span></Typography>
+                <Typography variant="h5" gutterBottom>Your chance to win 1 <span style={{ background: "#F4C204", fontWeight: "bold" }}>BTC</span></Typography>
                 <Typography variant="body1">
                   1) Connect your Wallet<br />
                   2) Select your 7 gameplay Numbers and then click Next<br />
@@ -69,10 +78,12 @@ const Home: React.FC = () => {
               </ContentBox>
             </Grid>
             <Grid item xs={12} md={6}>
-              {/* <NumberSelector /> */}
+              <NumberSelector />
             </Grid>
           </Grid>
         </MainContent>
+        <ButtonGroup/>
+
         <Footer />
       </BackgroundContainer>
     </>
@@ -80,3 +91,5 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+

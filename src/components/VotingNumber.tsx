@@ -60,7 +60,7 @@ const VotingNumber: React.FC = () => {
 
   return (
     <Box textAlign="center">
-      <Typography variant="h6">Select 7 Numbers</Typography>
+      <span  style={{color:"white", background:"blue",border:"2px solid white",padding:"15px",borderRadius:"10px"}}>Select 7 Numbers</span>
       <NumberGrid>
         {numberLayout.flat().map(number => (
           <NumberButton

@@ -64,8 +64,8 @@ const NumberSelector: React.FC = () => {
   ];
 
   return (
-    <Box textAlign="center" sx={{background:"white", padding:"20px",marginTop:"20px"}}>
-      <Typography variant="h6">Select 7 Numbers</Typography>
+    <Box textAlign="center" sx={{ padding:"20px",marginTop:"20px"}}>
+      <span  style={{color:"white", background:"#1E196D",border:"2px solid white",padding:"15px",borderRadius:"10px"}}>Select 7 Numbers</span>
       <NumberGrid>
         {numberLayout.flat().map(number => (
           <NumberButton
@@ -77,7 +77,7 @@ const NumberSelector: React.FC = () => {
           </NumberButton>
         ))}
       </NumberGrid>
-      <Button variant="contained" color="primary" onClick={handleNextClick}>
+      <Button variant="contained" color="primary" onClick={handleNextClick} sx={{color:"white", background:"#1E196D",border:"2px solid white",padding:"15px",borderRadius:"10px"}}>
         Next
       </Button>
       {error && <ErrorMessage>{error}</ErrorMessage>}
