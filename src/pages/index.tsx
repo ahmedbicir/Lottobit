@@ -17,6 +17,7 @@ const BackgroundContainer = styled(Box)(({ theme }) => ({
   backgroundPosition: 'center',
   zIndex: -1,
   marginTop:"20px",
+  fontFamily:"Playwrite New Zealand ",
   // opacity:0.7,
 
 
@@ -47,6 +48,8 @@ const MainContent = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   margin: '20px 0',
   padding: '10px 20px',
+  fontFamily:"Playwrite New Zealand ",
+
   [theme.breakpoints.down('sm')]: {
     padding: '10px',
   },
@@ -56,7 +59,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Crypto Landing Page</title>
+        <title>Lottobit Landing Page</title>
         <meta name="description" content="Landing page for a lattobit " />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -66,7 +69,7 @@ const Home: React.FC = () => {
           <Grid container spacing={4} justifyContent="center" >
             <Grid item xs={12} md={6}>
               <ContentBox>
-                <Typography variant="h5" gutterBottom>Your chance to win 1 <span style={{ background: "#F4C204", fontWeight: "bold" }}>BTC</span></Typography>
+                <Typography variant="h5" gutterBottom sx={{fontFamily:"Playwrite New Zealand" }}>Your chance to win 1 <span style={{ background: "#F4C204", fontWeight: "bold" }}>BTC</span></Typography>
                 <Typography variant="body1">
                   1) Connect your Wallet<br />
                   2) Select your 7 gameplay Numbers and then click Next<br />
